@@ -5,7 +5,15 @@
 // string with a ... ending.
 
 function truncateString(str, num) {
-  return str;
+  if (str.length <= num) {
+    return str;
+  } else {
+    var truncatedStr = str.slice(0, num);
+  }
+  return truncatedStr + "...";
 }
 
-truncateString("A-tisket a-tasket A green and yellow basket", 8);
+truncateString(
+  "A-tisket a-tasket A green and yellow basket",
+  "A-tisket a-tasket A green and yellow basket".length
+);
