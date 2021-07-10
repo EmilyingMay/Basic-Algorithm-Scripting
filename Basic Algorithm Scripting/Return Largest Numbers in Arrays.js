@@ -17,16 +17,11 @@ function largestOfFour(arr) {
   for(let j = 0; j < arr[i].length; j++) {
    if (max < arr[i][j]) {
     max = arr[i][j];
-    maxArr[i] = max;
-    console.log(max);
-    console.log(maxArr);
-   } else {
-    maxArr[i] = max;
-    console.log(max);
-    console.log(maxArr);
-   }
+   } 
+   maxArr[i] = max;
   } 
  }
+ console.log(maxArr);
  return maxArr;
 }
 
