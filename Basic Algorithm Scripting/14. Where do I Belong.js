@@ -13,7 +13,21 @@
 // is less than 20 (index 2) and greater than 5 (index 1).
 
 function getIndexToIns(arr, num) {
-  return num;
+  let sorted = arr.sort(function (a, b) {
+    return a - b;
+  });
+
+  console.log(sorted);
+
+  let index = sorted.findIndex(function (element) {
+    return element >= num;
+  });
+
+  if (index == -1) {
+    return (index = sorted.length);
+  }
+
+  return index;
 }
 
-getIndexToIns([40, 60], 50);
+getIndexToIns([2, 5, 10], 15);
