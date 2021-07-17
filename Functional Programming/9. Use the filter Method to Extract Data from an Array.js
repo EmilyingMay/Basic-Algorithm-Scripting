@@ -165,14 +165,10 @@ var watchList = [
 
 // Only change code below this line
 
-var filteredList = watchList.map(
-  (item) => (
-    (title = item.Title),
-    (imdbRating = item.imdbRating.filter(
-      (item) => parseInt(item.imdbRating) > 8.0
-    ))
-  )
-);
+var filteredList = watchList.map((item) => ({
+  title: item["Title"],
+  rating: item["imdbRating"],
+}));
 
 // Only change code above this line
 
