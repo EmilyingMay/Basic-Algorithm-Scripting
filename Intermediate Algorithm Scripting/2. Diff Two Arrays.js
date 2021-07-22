@@ -36,7 +36,7 @@ myDiffArray(
 
 // ------------------------------------------------------------------------
 
-// FreeCodeCamp dope solution
+// FreeCodeCamp dope solution :)
 
 function diffArray(arr1, arr2) {
   console.log(
