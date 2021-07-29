@@ -15,12 +15,13 @@
 // For example if you mean to replace the word Book
 // with the word dog, it should be replaced as Dog
 
+// =====================================================================
+
+// My Solution Uwu
+
 function myReplace(str, before, after) {
   let a = before.split("");
-  console.log(a);
-
   let b = after.split("");
-  console.log(b);
 
   if (a[0] == a[0].toUpperCase()) {
     b[0] = b[0].toUpperCase();
@@ -39,3 +40,27 @@ function myReplace(str, before, after) {
 }
 
 myReplace("I think we should look up there", "up", "Down");
+
+// ================================================================
+
+// FreeCodeCamp dope solutions;
+
+function my1Replace(str, before, after) {
+  if (before[0] === before[0].toUpperCase()) {
+    after = after.replace(after[0], after[0].toUpperCase());
+  }
+  return str.replace(before, after);
+}
+
+function my2Replace(str, before, after) {
+  return str
+    .split(" ")
+    .map((x) =>
+      x == before
+        ? x[0] == x[0].toUpperCase()
+          ? after[0].toUpperCase() + after.slice(1)
+          : after.toLowerCase()
+        : x
+    )
+    .join(" ");
+}
